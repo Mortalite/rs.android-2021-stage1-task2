@@ -10,8 +10,8 @@ class DateFormatter {
 	fun toTextDay(day: String, month: String, year: String): String {
 		try {
 			return DateTimeFormatter.ofPattern("dd MMMM, EEEE")
-									.withLocale(Locale("RU"))
-									.format(LocalDate.of(year.toInt(), month.toInt(), day.toInt()))
+				.withLocale(Locale("RU"))
+				.format(LocalDate.of(year.toInt(), month.toInt(), day.toInt()))
 		}
 		catch (exception: DateTimeException) {
 			return "Такого дня не существует"
